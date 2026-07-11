@@ -706,7 +706,37 @@ a { color: var(--teal); }
 .expect-list span { color: var(--ink-soft); font-size: 0.96rem; }
 
 #scheduler-embed { display: none; }
-#scheduler-embed.is-active { display: block; }
+#scheduler-embed.is-active { display: block; position: relative; min-height: 780px; }
+/* Branded loading mask over the Cliniko iframe (hides its unstyled flash). */
+.scheduler-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  color: var(--ink-soft, #5b6b66);
+  font-size: 0.98rem;
+  transition: opacity 0.35s ease;
+  z-index: 2;
+}
+.scheduler-loading.is-hidden { opacity: 0; pointer-events: none; }
+.scheduler-loading__spinner {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid rgba(28, 107, 98, 0.2);
+  border-top-color: #1c6b62;
+  animation: scheduler-spin 0.8s linear infinite;
+}
+@keyframes scheduler-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .scheduler-loading__spinner { animation-duration: 2s; }
+}
 #scheduler-embed .calendly-inline-widget,
 #scheduler-embed .scheduler-frame {
   border-radius: var(--radius-lg);

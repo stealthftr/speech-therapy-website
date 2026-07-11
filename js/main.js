@@ -75,12 +75,39 @@
         base += (base.indexOf("?") > -1 ? "&" : "?") + "embedded=true";
         cUrl = base + frag;
       }
+      // Cliniko's booking page is slow/heavy to load and briefly renders as
+      // unstyled HTML before its own CSS/JS apply. Mask that with a branded
+      // loading placeholder that sits over the iframe until it finishes loading,
+      // so families never see the raw unstyled flash.
+      var placeholder = document.createElement("div");
+      placeholder.className = "scheduler-loading";
+      placeholder.innerHTML =
+        '<span class="scheduler-loading__spinner" aria-hidden="true"></span>' +
+        '<p>Loading your booking calendar…</p>';
+
       var frame = document.createElement("iframe");
       frame.className = "scheduler-frame";
       frame.src = cUrl;
       frame.title = "Book an appointment with Lark Speech Pathology";
       frame.loading = "lazy";
+      // Give Cliniko a moment after load for its own styles/scripts to settle,
+      // then reveal the calendar. Also a safety timeout in case load never fires.
+      var revealed = false;
+      function revealCalendar() {
+        if (revealed) return;
+        revealed = true;
+        placeholder.classList.add("is-hidden");
+        window.setTimeout(function () {
+          if (placeholder.parentNode) placeholder.parentNode.removeChild(placeholder);
+        }, 400);
+      }
+      frame.addEventListener("load", function () {
+        window.setTimeout(revealCalendar, 600);
+      });
+      window.setTimeout(revealCalendar, 6000);
+
       schedulerBox.appendChild(frame);
+      schedulerBox.appendChild(placeholder);
       schedulerBox.classList.add("is-active");
       if (requestBlock) requestBlock.style.display = "none";
     } else if (cfg.calendlyUrl) {
