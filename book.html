@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Free Discovery Call | Lark Speech Pathology</title>
+  <meta name="description" content="Book a free 15-minute Discovery Call with a speech pathologist. Tell us what you're noticing about your child's talking — we'll help you decide the right next step, whether that's an assessment or starting therapy." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%231c6b62'/><ellipse cx='55' cy='52' rx='20' ry='16' fill='%23fbf8f3'/><circle cx='68' cy='44' r='10' fill='%23fbf8f3'/><path d='M77 42 L88 40 L78 48 Z' fill='%23f0b44c'/><circle cx='70' cy='42' r='2.4' fill='%231c6b62'/></svg>" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="index.html">
+        <svg class="brand__mark" width="42" height="42" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="48" fill="#1c6b62"/>
+          <path d="M24 60 L44 52 L40 66 Z" fill="#fbf8f3"/>
+          <ellipse cx="55" cy="52" rx="20" ry="16" fill="#fbf8f3"/>
+          <circle cx="68" cy="44" r="10" fill="#fbf8f3"/>
+          <path d="M77 42 L88 40 L78 48 Z" fill="#f0b44c"/>
+          <circle cx="70" cy="42" r="2.4" fill="#1c6b62"/>
+          <circle cx="86" cy="26" r="3" fill="#f0b44c"/>
+          <circle cx="78" cy="18" r="2.1" fill="#ef7a54"/>
+        </svg>
+        <span class="brand__name">Lark<span class="brand__tag">Speech Pathology · Children</span></span>
+      </a>
+      <button class="nav__toggle" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="nav__links">
+        <li><a href="concerns.html">Is this your child?</a></li>
+        <li><a href="assessment.html">Assessment</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="schools.html">Schools</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a class="btn btn--primary btn--sm" href="book.html" aria-current="page">Book a Free Call</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="wrap booking-grid">
+
+        <!-- Left: reassurance -->
+        <div>
+          <span class="eyebrow">Free 15-minute Discovery Call</span>
+          <h1 style="font-size:clamp(1.9rem,3.6vw,2.7rem);">Tell us what you're noticing. We'll help you find the right next step.</h1>
+          <p class="mt-2" style="font-size:1.08rem;">This is a real conversation with a speech pathologist — not a sales call. Many families finish the call simply reassured. That makes our day too.</p>
+
+          <ul class="expect-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ef7a54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 1 0-3.5 6.6L21 20z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>
+              <div><strong>You talk, we listen</strong><span>Describe what you're seeing at home or school — no preparation needed.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ef7a54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+              <div><strong>You get an honest read</strong><span>Typical for their age, worth watching, or worth a closer look — we'll tell you which.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ef7a54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11"/></svg>
+              <div><strong>You choose how to start</strong><span>A full assessment for the complete picture, or straight into therapy. We'll help you decide — and explain funding, including NDIS.</span></div>
+            </li>
+          </ul>
+
+          <div class="reassure mt-4">
+            <p><strong>NDIS &amp; funding questions welcome.</strong> One of the most useful things we do on this call is explain exactly how your funding can be used — before you commit to anything.</p>
+          </div>
+
+          <p class="mt-3" style="font-size:0.95rem;">Rather talk right now? Call us on <a href="#" data-phone style="font-weight:700;"></a> or email <a href="#" data-email></a>.</p>
+        </div>
+
+        <!-- Right: scheduler / request form -->
+        <div>
+          <!-- Your Cliniko bookings calendar renders here automatically once
+               SITE_CONFIG.clinikoUrl is set in js/config.js.
+               ALTERNATIVE: to use Cliniko's own copy-paste widget instead,
+               delete this <div> and paste Cliniko's "Code to embed in your
+               website" snippet right here. -->
+          <div id="scheduler-embed"></div>
+
+          <div id="request-form-block">
+            <div class="form-card">
+              <h3>Request your free Discovery Call</h3>
+              <p>Tell us a little about your child and the best way to reach you. We respond within one business day — usually much faster.</p>
+              <form data-handler="request" data-success="request-success" name="discovery-request" method="POST" data-netlify="true" novalidate>
+                <input type="hidden" name="form-name" value="discovery-request" />
+                <div class="field--row">
+                  <div class="field">
+                    <label for="r-name">Your name</label>
+                    <input id="r-name" name="parent_name" type="text" autocomplete="name" required placeholder="Parent / guardian name" />
+                  </div>
+                  <div class="field">
+                    <label for="r-age">Child's age</label>
+                    <select id="r-age" name="child_age" required>
+                      <option value="" disabled selected>Select age</option>
+                      <option>Under 12 months</option>
+                      <option>12–18 months</option>
+                      <option>18–24 months</option>
+                      <option>2 years</option>
+                      <option>3 years</option>
+                      <option>4 years</option>
+                      <option>5 years</option>
+                      <option>6–8 years</option>
+                      <option>9–12 years</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field--row">
+                  <div class="field">
+                    <label for="r-email">Email</label>
+                    <input id="r-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" />
+                  </div>
+                  <div class="field">
+                    <label for="r-phone">Phone</label>
+                    <input id="r-phone" name="phone" type="tel" autocomplete="tel" required placeholder="04XX XXX XXX" />
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="r-concern">What's your main concern?</label>
+                  <select id="r-concern" name="concern_type" required>
+                    <option value="" disabled selected>Choose the closest match</option>
+                    <option>Not talking yet / very few words</option>
+                    <option>Hard to understand / unclear speech</option>
+                    <option>Getting stuck / stuttering</option>
+                    <option>Understanding language / following directions</option>
+                    <option>School, reading, or social communication</option>
+                    <option>Not sure — I just have a feeling</option>
+                  </select>
+                </div>
+                <div class="field--row">
+                  <div class="field">
+                    <label for="r-funding">How would you fund therapy?</label>
+                    <select id="r-funding" name="funding_type">
+                      <option value="" selected>Not sure yet</option>
+                      <option>NDIS (self-managed)</option>
+                      <option>NDIS (plan-managed)</option>
+                      <option>Medicare care plan</option>
+                      <option>Private health</option>
+                      <option>Self-funded</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="r-location">Where would you like sessions?</label>
+                    <select id="r-location" name="location_pref">
+                      <option value="" selected>Not sure yet</option>
+                      <option>At school / kindy</option>
+                      <option>At home</option>
+                      <option>Online</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="r-notes">Tell us what you're noticing (optional)</label>
+                  <textarea id="r-notes" name="details" placeholder="e.g., She's 2 and only says 'mum,' 'dad,' and 'ball.' Her kindy teacher mentioned it too…"></textarea>
+                </div>
+                <button class="btn btn--primary btn--lg" type="submit" style="width:100%;">Request my free call</button>
+                <div class="form-msg" role="status"></div>
+                <p class="form-footnote">No obligation, no pressure, no spam. Your information stays private and is only used to contact you about your request.</p>
+              </form>
+              <div class="form-success" id="request-success" role="status">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#1c6b62" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.5 2.5L16 9"/></svg>
+                <h3>Request received!</h3>
+                <p>We'll reach out within one business day to set up your free Discovery Call. Keep an eye on your phone and inbox — and take a breath. You've taken the first step.</p>
+                <a class="btn btn--secondary mt-3" href="guide.html">While you wait: get the free milestone guide</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Mini FAQ -->
+    <section class="section section--cream-deep section--tight">
+      <div class="wrap">
+        <div class="section-head section-head--center">
+          <h2 style="font-size:1.6rem;">Before you book, you might be wondering…</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Does my child need to be on the call?</summary>
+            <div class="faq-item__body"><p>No — this call is for you. It works well during naptime or after bedtime. If your child's chattering in the background, that's useful too, but it's not required.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>Is this really free? What's the catch?</summary>
+            <div class="faq-item__body"><p>Really free, no catch. If an assessment or therapy makes sense, we'll explain the options and costs — and you decide, with zero pressure. If your child sounds on track, we'll happily say so.</p></div>
+          </details>
+          <details class="faq-item">
+            <summary>What if I'm not sure anything's actually wrong?</summary>
+            <div class="faq-item__body"><p>"I'm not sure" is the most common reason parents call, and it's a great one. Fifteen minutes either gives you peace of mind or catches something early. Both are wins.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" style="margin-bottom:14px;">
+            <svg class="brand__mark" width="36" height="36" viewBox="0 0 100 100" aria-hidden="true">
+              <circle cx="50" cy="50" r="48" fill="#fbf8f3"/>
+              <path d="M24 60 L44 52 L40 66 Z" fill="#123f39"/>
+              <ellipse cx="55" cy="52" rx="20" ry="16" fill="#123f39"/>
+              <circle cx="68" cy="44" r="10" fill="#123f39"/>
+              <path d="M77 42 L88 40 L78 48 Z" fill="#f0b44c"/>
+              <circle cx="70" cy="42" r="2.4" fill="#fbf8f3"/>
+            </svg>
+            <span class="brand__name">Lark<span class="brand__tag">Speech Pathology · Children</span></span>
+          </a>
+          <p>Mobile paediatric speech pathology<br />Metropolitan Adelaide, SA &amp; online</p>
+          <p class="mt-2">Mon–Fri 8am–6pm</p>
+        </div>
+        <div>
+          <h4>Get started</h4>
+          <ul>
+            <li><a href="book.html">Book a free Discovery Call</a></li>
+            <li><a href="assessment.html">Speech assessment</a></li>
+            <li><a href="guide.html">Free milestone guide</a></li>
+            <li><a href="pricing.html">Pricing &amp; funding</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="concerns.html">Is this your child?</a></li>
+            <li><a href="schools.html">For schools</a></li>
+            <li><a href="about.html">About Catherine</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="#" data-phone></a></li>
+            <li><a href="#" data-email></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© <span data-year></span> Lark Speech Pathology. All rights reserved.</p>
+        <p>This website provides general information only and is not a substitute for professional assessment, diagnosis, or medical advice.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
